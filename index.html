@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div >
-            <img src="assets/img/Jonathan.png" alt="Foto de Jonathan" class="profile-pic">
-            <h1 class="sidebar-h1">Jonathan</h1>
-        </div>
+    <header class="topbar">
+        <h1 class="topbar-h1">Jonathan Christofoleti</h1>
         <nav>
             <ul>
                 <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
@@ -20,20 +17,27 @@
                 <li><a href="#projetos"><i class="fas fa-briefcase"></i> Projetos</a></li>
             </ul>
         </nav>
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
+    </header>
 
     <div class="main-content">
         <section class="intro-section">
-            <h1>Jonathan</h1>
-            <h2>Desenvolvedor</h2>
+            <img src="assets/img/jonathan.jpg" alt="Jonathan" class="intro-img">
+            
+            <div>
+                <h1>Jonathan</h1>
+                <h2>Desenvolvedor</h2>
+                <h4>Meu nome é Jonathan Marques Christofolei, tenho 22 anos e estou cursando engenharia de computação. Sou um desenvolvedor web/mobile e gosto de aprender diversas tecnologias.</h4>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
         </section>
 
-        <section id="skills">
+        <section id="skills" class="skills">
             <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">
@@ -65,17 +69,36 @@
 
         <section id="formacao">
             <h2>Formação</h2>
-            <p>Engenharia de computação - Universidade Tecnologica Federal do Paraná</p>
+            <div class="formacao-item">
+                <img src="assets/img/utfpr.png" alt="UTFPR">
+                <p>Engenharia de computação (cursando) - Universidade Tecnologica Federal do Paraná</p>
+            </div>
         </section>
 
-        <section id="projetos">
+        <section id="projetos" class="projetos">
             <h2>Projetos</h2>
-            <div class="video-container">
-                <div class="phone-frame">
-                    <video controls poster="assets/img/video-poster.png">
-                        <source src="assets/video/ze.mp4" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
+            <div class="projetos-row">
+                <div class="video-container">
+                    <div class="phone-frame">
+                        <video controls poster="assets/img/video-poster.png">
+                            <source src="assets/video/ze.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                    <div>
+                        <h1>Ze das Caixas</h1>
+                        <p>Projeto de organização de diversos itens pela casa, separadas por caixas em diversos ambientes. Projeto realizado em React Native (front-end) e Firebase (banco de dados)</p>
+                    </div>
+                </div>
+            
+                <div class="image-container">
+                    <div class="phone-frame">
+                        <img src="assets/img/previsao.png" alt="Previsão" class="framed-img">
+                    </div>
+                    <div>
+                        <h1>Previsão do tempo</h1>
+                        <p>Projeto de criação de um aplicativo para a previsão do tempo baseado na sua localização. Realizado com a React Native (frontend) e WeatherBit (API para dados do clima)</p>
+                    </div>
                 </div>
             </div>
         </section>
