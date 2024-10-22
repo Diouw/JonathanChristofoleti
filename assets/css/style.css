@@ -257,15 +257,14 @@ h2 {
         flex-wrap: wrap;
     }
 
-
     .phone-frame {
-        width: 100%;
+        width: 80%;
         height: auto;
         padding: 10px;
     }
 
     .projeto-texto{
-        width: 100%;
+        width: 80%;
         padding: 20px;
     }
 
