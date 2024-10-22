@@ -14,3 +14,45 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
+
+
+const words = ['Web', 'Mobile'];
+let currentIndex = 0;
+let currentWord = '';
+let isDeleting = false;
+const dynamicTextElement = document.getElementById('dynamic-text');
+const typingSpeed = 150;
+const deletingSpeed = 100; 
+const delayBetweenWords = 1500;
+
+function type() {
+    const fullWord = words[currentIndex];
+
+    if (isDeleting) {
+        currentWord = fullWord.substring(0, currentWord.length - 1);
+    } else {
+        currentWord = fullWord.substring(0, currentWord.length + 1);
+    }
+
+    dynamicTextElement.textContent = currentWord;
+
+    let timeout = typingSpeed;
+
+    if (isDeleting) {
+        timeout = deletingSpeed;
+    }
+
+    if (!isDeleting && currentWord === fullWord) {
+        timeout = delayBetweenWords;
+        isDeleting = true;
+    } else if (isDeleting && currentWord === '') {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % words.length;
+        timeout = 500;
+    }
+    setTimeout(type, timeout);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    type();
+});
